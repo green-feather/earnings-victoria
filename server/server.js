@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3002;
 const db = require('../database/index.js');
 
 app.use(express.static(`${__dirname}/../public/`));
@@ -21,7 +21,7 @@ app.get('/:id', (req, res) => {
 
 app.get('/api/earnings', (req, res) => {
   // set Default data equal to 001
-    db.getEarning("001", (data) => {
+    db.getEarning("1", (data) => {
       res.status(200).json(data)
     })
 });

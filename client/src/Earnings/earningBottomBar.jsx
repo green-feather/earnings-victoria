@@ -10,7 +10,7 @@ const EarningBottomBar = () => (
   <div className = 'EPS-other' id='Actual'>
   <span id='actualCircleExample'>
   </span>
-    <p id='Actual'>Actual</p>
+    <p id='Actual'>Actualssss</p>
     <p id='Actual'>Available Apr 30, After Hours</p>
   </div>
  </div>

@@ -5,10 +5,11 @@ import EarningsChartFrame from './earningsChartFrame.jsx';
 import EarningBottomBar from './earningBottomBar.jsx';
 import $ from 'jquery';
 
-const host = '52.53.224.110';
+// const host = '52.53.224.110';
+const host = 'localhost'
 const path = window.location.pathname;
 
-window.location.pathname
+// window.location.pathname
 class Earnings extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,8 @@ class Earnings extends React.Component {
   }
 
   componentDidMount() {
+    console.log('path is ---')
+    console.log(path)
     $.get(`http://${host}:3002/api/earnings${path}`, (Data) => {
     // $.get('//front-end-capstone.herokuapp.com/data/earnings', (Data) => {
       this.setState({
@@ -27,6 +30,7 @@ class Earnings extends React.Component {
   }
 
   render() {
+    console.log('------------in render')
     const earningsData = this.state.earnings;
     const actEarnings = [];
     const estEarnings = [];
