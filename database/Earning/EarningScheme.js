@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost:27017/bigdata2', {useNewUrlParser: true});
+let host = '54.189.252.22'
+mongoose.connect(`mongodb://${host}:27017/bigdata2`, {useNewUrlParser: true});
 
 const earningSchema = new mongoose.Schema({
   companyId: Number,
