@@ -21,7 +21,7 @@ class Earnings extends React.Component {
   componentDidMount() {
     console.log('path is ---')
     console.log(path)
-    $.get(`http://${host}:3002/api/earnings${path}`, (Data) => {
+    $.get(`http://${host}:3000/api/earnings${path}`, (Data) => {
     // $.get('//front-end-capstone.herokuapp.com/data/earnings', (Data) => {
       this.setState({
         earnings: Data,
