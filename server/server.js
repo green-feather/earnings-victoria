@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const db = require('../database/index.js');
-let host = '54.218.30.17'
+//let host = '54.218.30.17'
 // app.use(express.static(`${__dirname}/../public/`));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,5 +45,5 @@ app.put('/api/earnings', function(req, res) {
 });
 
 app.listen(port, () => {
-  console.log(`server running at: http://${host}:${port}`);
+  console.log(`port`);
 });
